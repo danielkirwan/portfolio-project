@@ -2,12 +2,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Home</title>
+    <title>Daniel Kirwan</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
@@ -47,20 +48,20 @@
   <body>
     <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Daniel Kirwan</a>
+  <a class="navbar-brand" href="{% url 'home' %}">Daniel Kirwan</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Twitter</a>
+        <a class="nav-link" href="https://twitter.com/daniel_kirwan">Twitter</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Resume</a>
+        <a class="nav-link" href="{% static 'Kirwan_Daniel_CV.pdf' %}">Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
       </li>
     </ul>
   </div>
@@ -71,11 +72,12 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1>Hi, I'm Dan</h1>
+      <h1>Hi, I'm Daniel Kirwan</h1>
       <p class="lead text-muted">This is a side project built in Django with Python3</p>
       <p>
         <a href="mailto:danielkirwan07@gmail.com" class="btn btn-primary my-2">Email me</a>
       </p>
+      <img src="{% static 'profile.png' %}">
     </div>
   </section>
 
